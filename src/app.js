@@ -2,6 +2,9 @@ import * as fp from "fingerpose";
 const handpose = require('@tensorflow-models/handpose');
 require('@tensorflow/tfjs-backend-webgl');
 
+import {turnLeftGesture} from "./TurnLeft";
+import {turnRightGesture} from "./TurnRight";
+
 const config = {
   video: { width: 640, height: 480, fps: 30 }
 };
@@ -17,7 +20,9 @@ const landmarkColors = {
 
 const gestureStrings = {
   'thumbs_up': '👍',
-  'victory': '✌🏻'
+  'victory': '✌🏻',
+  'turn_left': '1',
+  'turn_right': '2'
 };
 
 async function main() {
@@ -32,7 +37,9 @@ async function main() {
   // add "✌🏻" and "👍" as sample gestures
   const knownGestures = [
     fp.Gestures.VictoryGesture,
-    fp.Gestures.ThumbsUpGesture
+    fp.Gestures.ThumbsUpGesture,
+    turnLeftGesture,
+    turnRightGesture
   ];
   const GE = new fp.GestureEstimator(knownGestures);
 
