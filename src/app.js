@@ -1,6 +1,7 @@
 import * as fp from "fingerpose";
 const handpose = require('@tensorflow-models/handpose');
 require('@tensorflow/tfjs-backend-webgl');
+import "./styles.css";
 
 import {turnLeftGesture} from "./TurnLeft";
 import {turnRightGesture} from "./TurnRight";
