@@ -6,6 +6,11 @@ import "./styles.css";
 import {turnLeftGesture} from "./TurnLeft";
 import {turnRightGesture} from "./TurnRight";
 
+const predic = {
+  newPredic: '',
+  oldPredic: ''
+}
+
 const config = {
   video: { width: 640, height: 480, fps: 30 }
 };
@@ -22,8 +27,8 @@ const landmarkColors = {
 const gestureStrings = {
   'thumbs_up': '👍',
   'victory': '✌🏻',
-  'turn_left': '1',
-  'turn_right': '2'
+  'turn_left': 'left',
+  'turn_right': 'right'
 };
 
 async function main() {
@@ -80,7 +85,19 @@ async function main() {
           return (p.confidence > c.confidence) ? p : c;
         });
 
+
+
         resultLayer.innerText = gestureStrings[result.name];
+
+        predic.oldPredic = predic.newPredic;
+        predic.newPredic = result.name;
+        if(predic.oldPredic === 'turn_right' && predic.newPredic === 'turn_left' ){
+          console.log('swipe left');
+        }
+        if(predic.oldPredic === 'turn_left' && predic.newPredic === 'turn_right' ){
+          console.log('swipe right');
+        }
+        console.log(result.name);
       }
     }
 
