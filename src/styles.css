@@ -31,12 +31,25 @@ body {
   height: 100%;
 }
 
+
 #video {
   transform: scaleX(-1);
 }
 
 #pose-result {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 100%;
+  border: 4px double black;
   font-size: 100px;
-  text-align: right;
-  padding: 20px 30px 0 0;
+  background: aliceblue ;
+  /*text-align: right;*/
+  /*padding: 0 0 0 80%;*/
+}
+
+textarea{
+  /*top: 0;*/
+  height: auto;
+  width: 100%;
 }

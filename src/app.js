@@ -29,6 +29,9 @@ const gestureStrings = {
   'victory': '✌🏻',
   'turn_left': 'left',
   'turn_right': 'right'
+
+  // 'slide_left': '👈',
+  // 'slide_right': '👉'
 };
 
 async function main() {
