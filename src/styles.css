@@ -16,12 +16,22 @@ body {
   margin: 0;
   padding: 0;
 }
-
-#video-container {
-  width: 640px;
-  height: 480px;
-  position: relative;
+@media all and (orientation:portrait){
+  #video-container {
+    width: 480px;
+    height: 640px;
+    position: relative;
+  }
 }
+
+@media all and (orientation:landscape){
+  #video-container {
+    width: 640px;
+    height: 480px;
+    position: relative;
+  }
+}
+
 
 .layer {
   position: absolute;
