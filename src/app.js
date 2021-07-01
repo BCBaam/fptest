@@ -133,8 +133,9 @@ async function initCamera(width, height, fps) {
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
   video.srcObject = stream;
 
-  console.log(video.height.videoHeight + 'px');
-  video.style.setProperty('--element-height', video.height.videoHeight + 'px');
+  // console.log(video.videoHeight + 'px');
+  // console.log(video.videoWidth);
+  // video.style.setProperty('--element-height', video.videoHeight + 'px');
   // video.style.height = video.height.videoHeight + 'px';
   // console.log(video.height.videoHeight + 'px');
   // video.height.videoHeight;
