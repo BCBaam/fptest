@@ -11,6 +11,7 @@ const predic = {
   oldPredic: ''
 }
 
+
 const config = {
   video: { width: 640, height: 480, fps: 30 }
 };
@@ -131,6 +132,12 @@ async function initCamera(width, height, fps) {
   // get video stream
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
   video.srcObject = stream;
+
+  console.log(video.height.videoHeight + 'px');
+  video.style.setProperty('--element-height', video.height.videoHeight + 'px');
+  // video.style.height = video.height.videoHeight + 'px';
+  // console.log(video.height.videoHeight + 'px');
+  // video.height.videoHeight;
 
   return new Promise(resolve => {
     video.onloadedmetadata = () => { resolve(video) };
