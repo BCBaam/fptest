@@ -18,22 +18,29 @@ body {
   margin: 0;
   padding: 0;
 }
-/*@media all and (orientation:portrait){*/
-/*  #video-container {*/
-/*    width: 480px;*/
-/*    height: 640px;*/
-/*    position: relative;*/
-/*  }*/
-/*}*/
-
-/*@media all and (orientation:landscape){*/
+@media (min-width: 1025px){
   #video-container {
-    width: 60%;
-    /*height: var(--element-height);*/
-    height: 100px;
+    width: 640px;
+    height: 480px;
     position: relative;
   }
-/*}*/
+}
+
+@media (orientation:portrait)  and (max-width: 960px){
+  #video-container {
+    width: 480px;
+    height: 640px;
+    position: relative;
+  }
+}
+
+@media (orientation:landscape) and (max-width: 960px){
+  #video-container {
+    width: 640px;
+    height: 480px;
+    position: relative;
+  }
+}
 
 
 .layer {
@@ -42,8 +49,12 @@ body {
   left: 0;
   width: 100%;
   height: auto;
+  margin: 0;
 }
 
+/*#canvas{*/
+/*  height: ;*/
+/*}*/
 
 #video {
   transform: scaleX(-1);
