@@ -6,8 +6,8 @@
 html, body {
   --element-ratio: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 640px;
+  height: 480px;
   overflow: hidden;
   font-family: Arial, sans-serif;
   background-color: #333333;
@@ -26,19 +26,29 @@ body {
   }
 }
 
-@media (orientation:portrait)  and (max-width: 960px){
+@media (orientation:portrait)  and (max-width: 1025px){
   #video-container {
     width: 480px;
     height: 640px;
     position: relative;
   }
+
+  #canvas{
+    height: calc(var(--element-ratio) * 640px);
+    width: calc(var(--element-ratio) * 480px);
+  }
 }
 
-@media (orientation:landscape) and (max-width: 960px){
+@media (orientation:landscape) and (max-width: 1025px){
   #video-container {
     width: 640px;
     height: 480px;
     position: relative;
+  }
+
+  #canvas{
+    height: calc(var(--element-ratio) * 480px);
+    width: calc(var(--element-ratio) * 640px);
   }
 }
 
@@ -52,10 +62,10 @@ body {
   margin: 0;
 }
 
-#canvas{
-  height: calc(var(--element-ratio) * 100%);
-  width: calc(var(--element-ratio) * 100%);
-}
+/*#canvas{*/
+/*  height: calc(var(--element-ratio) * 100%);*/
+/*  width: calc(var(--element-ratio) * 100%);*/
+/*}*/
 
 #video {
   transform: scaleX(-1);
