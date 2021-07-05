@@ -66,6 +66,16 @@ body {
 /*  width: calc(var(--element-ratio) * 100%);*/
 /*}*/
 
+#video-container {
+  background-color: firebrick;
+}
+#video {
+  background-color: darkgreen;
+}
+#canvas{
+  background-color: blue;
+}
+
 #video {
   transform: scaleX(-1);
   height: 100%;
