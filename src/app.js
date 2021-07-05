@@ -139,7 +139,9 @@ async function initCamera(width, height, fps) {
   // video.style.height = video.height.videoHeight + 'px';
   // console.log(video.height.videoHeight + 'px');
   // video.height.videoHeight;
+  const canvas = document.querySelector("#canvas");
   let i = window.devicePixelRatio;
+  canvas.style.setProperty('--element-ratio', String(i));
   console.log(i);
 
   return new Promise(resolve => {
