@@ -139,6 +139,8 @@ async function initCamera(width, height, fps) {
   // video.style.height = video.height.videoHeight + 'px';
   // console.log(video.height.videoHeight + 'px');
   // video.height.videoHeight;
+  let i = window.devicePixelRatio;
+  console.log(i);
 
   return new Promise(resolve => {
     video.onloadedmetadata = () => { resolve(video) };
