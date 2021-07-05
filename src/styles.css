@@ -34,8 +34,8 @@ body {
   }
 
   #canvas{
-    height: calc(var(--element-ratio) * 640px);
-    width: calc(var(--element-ratio) * 480px);
+    height: 640px;
+    width: 480px;
   }
 }
 
@@ -47,8 +47,8 @@ body {
   }
 
   #canvas{
-    height: calc(var(--element-ratio) * 480px);
-    width: calc(var(--element-ratio) * 640px);
+    height: 480px;
+    width: 640px;
   }
 }
 
