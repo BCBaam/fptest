@@ -52,7 +52,6 @@ body {
   }
 }
 
-
 .layer {
   position: absolute;
   top: 0;
@@ -71,6 +70,7 @@ body {
   transform: scaleX(-1);
   height: 100%;
   width: 100%;
+  object-fit: fill;
 }
 
 #pose-result {
