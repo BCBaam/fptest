@@ -6,8 +6,8 @@
 html, body {
   --element-ratio: 0;
 
-  width: 640px;
-  height: 480px;
+  width: 1000px;
+  height: 1000px;
   overflow: hidden;
   font-family: Arial, sans-serif;
   background-color: #333333;
@@ -26,7 +26,7 @@ body {
   }
 }
 
-@media (orientation:portrait)  and (max-width: 1025px){
+@media screen and (orientation:portrait)  and (max-width: 1025px){
   #video-container {
     width: 480px;
     height: 640px;
@@ -39,7 +39,7 @@ body {
   }
 }
 
-@media (orientation:landscape) and (max-width: 1025px){
+@media screen and (orientation:landscape) and (max-width: 1025px){
   #video-container {
     width: 640px;
     height: 480px;
@@ -75,8 +75,8 @@ body {
 
 #pose-result {
   position: absolute;
-  height: 100%;
-  width: 20%;
+  height: 0;
+  width: 0;
   left: 100%;
   border: 4px double black;
   font-size: 100px;
